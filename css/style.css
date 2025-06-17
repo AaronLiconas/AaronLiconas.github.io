@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+/* Reset y fuente global */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+      font-family: 'Quicksand', Arial, sans-serif;
+  background: url('../img/kuromi.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Saludo principal */
+.greetings {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 16px #39c6d6;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.greetings > span {
+  animation: glow 2.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes glow {
+  0%, 100% {
+    color: #fff;
+    text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+  }
+  10%, 90% {
+    color: #111;
+    text-shadow: none;
+  }
+}
+
+.greetings > span:nth-child(2) { animation-delay: .2s; }
+.greetings > span:nth-child(3) { animation-delay: .4s; }
+.greetings > span:nth-child(4) { animation-delay: .6s; }
+.greetings > span:nth-child(5) { animation-delay: .8s; }
+.greetings > span:nth-child(6) { animation-delay: 1s; }
+
+/* Descripción */
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 1px 8px #0003;
+  text-align: center;
+}
+
+/* Botón principal */
+.button {
+  margin-top: 10px;
+}
+
+.boton-kuromi {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: #ff69b4;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px #0002;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.boton-kuromi:hover {
+  background: #d72660;
+  color: #fff;
+  transform: scale(1.05);
+}
+.boton-musica {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #fff;
+  color: #222;
+  border: none;
+  box-shadow: 0 2px 8px #0003;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.boton-musica:hover {
+  background: #ffe0f0;
+}
+
+/* Responsive */
+@media screen and (max-width: 574px) {
+  .greetings {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+  .boton-kuromi {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
